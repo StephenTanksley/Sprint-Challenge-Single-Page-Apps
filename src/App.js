@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import axios from 'axios'
 import TabNav from "./components/TabNav.js";
 import Header from "./components/Header.js";
 import { Card, Image } from 'semantic-ui-react'
@@ -9,12 +10,62 @@ import {CharacterList} from './components/Characters/CharacterList'
 import {LocationsCard} from './components/Locations/LocationCard'
 import {LocationsList} from './components/Locations/LocationsList'
 import {EpisodeList} from './components/Episodes/EpisodeList'
+import {EpisodeCard} from './components/Episodes/EpisodeCard'
 import WelcomePage from './components/WelcomePage.js';
 
 
 
 
 function App() {
+  const [characters, setCharacters] = useState([false])//just gives us a blank boolean saying we don't have any data here.
+  const [episodes, setEpisodes] = useState([false])//gives us a blank array for putting data into.
+  const [locations, setLocations] = useState([false])//gives us a blank array for putting data into.scss
+
+  //Characters
+  useEffect(() => {
+    axios.get('https://rickandmortyapi.com/api/character')
+    .then(response => {
+      // console.log(response.data.results)
+      setCharacters(response.data.results)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }, [])
+
+  // console.log(characters)
+  // console.log(props)
+
+  //Locations
+  useEffect(() => {
+    axios.get('https://rickandmortyapi.com/api/location')
+    .then(response => {
+      // console.log(response.data.results)
+      setLocations(response.data.results)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }, [])
+
+  // console.log(locations)
+  // console.log(props)
+
+  //Episodes
+  useEffect(() => {
+    axios.get('https://rickandmortyapi.com/api/episode')
+    .then(response => {
+      // console.log(response.data.results)
+      setEpisodes(response.data.results)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }, [])
+
+  console.log(episodes)
+  // console.log(props)
+
 
   return (
     <div className="App">
@@ -40,17 +91,18 @@ function App() {
     <Route exact path="/" component={WelcomePage} />
     <Route 
       path="/character-list" 
-      render={(props) => <CharacterList {...props}  />} />
+      render={(props) => <CharacterList {...props} characters={characters} />} />
     
     <Route 
       path="/locations-list" 
-      render={(props) => <LocationsList {...props}  />} />
+      render={(props) => <LocationsList {...props} locations={locations} />} />
                           
-    
     <Route 
       path="/episode-list" 
-      render={(props) => <EpisodeList {...props} />} />
+      render={(props) => <EpisodeList {...props} episodes={episodes} />} />
                         
+
+
 
     </div>
   );
