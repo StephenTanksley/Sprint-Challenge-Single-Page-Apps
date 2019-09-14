@@ -17,14 +17,6 @@ const Container = styled.div`
     background-color: black;
 `;
 
-const CardContainer = styled.div `
-    margin: 0 auto;
-    width: 80%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-`
-
 
 const ListHeading = styled.ul`
 
@@ -51,13 +43,14 @@ const List = styled.p `
 `
 
 export const EpisodeCard = (props) => {
-    console.log(props)
+    const ep = props.episodes
+    console.log(ep)
     return (
       <Container>
             <ListHeading>
-                <List>Name: {props.name}</List>
-                <List>Episode: {props.episode}</List>
-                <List>Episode: {props.air_date}</List>
+                <List>Name: {ep.name}</List>
+                <List>Episode: {ep.episode}</List>
+                <List>Episode: {ep.air_date}</List>
             </ListHeading>
       </Container>
     )
