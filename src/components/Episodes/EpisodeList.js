@@ -19,7 +19,7 @@ console.log(props)
         <CardContainer> {/*This is just the place where I'm getting to pass in value for my props.*/}
             {props.episodes.map((item, index) => {//Doesn't run the map function until we get data back from the API.
                     return (
-                    <EpisodeCard item = {props.episodes}
+                    <EpisodeCard episode = {item}
                           key = {index}
                         />
                 )
