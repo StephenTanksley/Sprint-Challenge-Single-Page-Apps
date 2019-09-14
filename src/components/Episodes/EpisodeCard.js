@@ -54,13 +54,11 @@ export const EpisodeCard = (props) => {
     console.log(props)
     return (
       <Container>
-            <img src={props.url} />
             <ListHeading>
                 <List>Name: {props.name}</List>
                 <List>Episode: {props.episode}</List>
                 <List>Episode: {props.air_date}</List>
             </ListHeading>
-        
       </Container>
     )
     

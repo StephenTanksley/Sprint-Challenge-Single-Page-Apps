@@ -12,14 +12,14 @@ const CardContainer = styled.div `
 `
 
 export const EpisodeList = (props) =>  {
-// console.log(props)
+console.log(props)
 
   return (
         //STEP 7 - This is where I'm using my map.
         <CardContainer> {/*This is just the place where I'm getting to pass in value for my props.*/}
             {props.episodes.map((item, index) => {//Doesn't run the map function until we get data back from the API.
                     return (
-                    <EpisodeCard episode = {item}
+                    <EpisodeCard item = {props.episodes}
                           key = {index}
                         />
                 )

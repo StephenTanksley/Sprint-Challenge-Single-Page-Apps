@@ -17,9 +17,9 @@ import WelcomePage from './components/WelcomePage.js';
 
 
 function App() {
-  const [characters, setCharacters] = useState([false])//just gives us a blank boolean saying we don't have any data here.
-  const [episodes, setEpisodes] = useState([false])//gives us a blank array for putting data into.
-  const [locations, setLocations] = useState([false])//gives us a blank array for putting data into.scss
+  const [characters, setCharacters] = useState([])//just gives us a blank boolean saying we don't have any data here.
+  const [episodes, setEpisodes] = useState([])//gives us a blank array for putting data into.
+  const [locations, setLocations] = useState([])//gives us a blank array for putting data into.scss
 
   //Characters
   useEffect(() => {
