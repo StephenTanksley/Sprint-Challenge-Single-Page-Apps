@@ -11,7 +11,6 @@ const CardContainer = styled.div `
     flex-wrap: wrap;
 `
 
-
 export const EpisodeList = (props) =>  {
 // console.log(props)
 

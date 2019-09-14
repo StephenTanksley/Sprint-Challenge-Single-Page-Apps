@@ -1,6 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const Container = styled.div`
+
+    font-size: 62.5%;
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    justify-content: space-around;
+    align-items: center;
+    
+    border: .2rem solid white
+    margin: 2rem;
+    border-radius: 1rem;
+    padding: .5rem;
+    background-color: black;
+`;
+
 const CardContainer = styled.div `
     margin: 0 auto;
     width: 80%;
@@ -35,19 +51,17 @@ const List = styled.p `
 `
 
 export const EpisodeCard = (props) => {
-    const entry = props.episode
+    console.log(props)
     return (
-      <CardContainer> {
-        <div>
-            <img src={entry.url} />
+      <Container>
+            <img src={props.url} />
             <ListHeading>
-                <List>Name: {entry.name}</List>
-                <List>Episode: {entry.episode}</List>
-                <List>Episode: {entry.air_date}</List>
+                <List>Name: {props.name}</List>
+                <List>Episode: {props.episode}</List>
+                <List>Episode: {props.air_date}</List>
             </ListHeading>
-        </div>
-      }
-      </CardContainer>
+        
+      </Container>
     )
     
 }
