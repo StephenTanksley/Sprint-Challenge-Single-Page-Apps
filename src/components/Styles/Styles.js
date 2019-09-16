@@ -13,7 +13,7 @@ export const Container = styled.div`
 export const Card = styled.div`
 
     font-size: 62.5%;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     line-height: 2rem;
     color: white;
     display: flex;

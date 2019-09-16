@@ -1,18 +1,21 @@
 import React from "react";
-import {Card} from '../Styles/Styles'
+
+import {Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle} from 'reactstrap';
+
+// import {Card} from '../Styles/Styles'
 
 export const CharacterCard = (props) => {
   const char = props.item
   return (
     <Card>
-          <div>
-              <img src={char.image} alt='character portrait' />
-              <h2>Name: {char.name}</h2><br />
-              <div>Gender: {char.gender}</div>
-              <div>Species: {char.species}</div>
-              <div>Status: {char.status}</div>
-
-          </div>
+      <CardBody>
+        <CardImg src={char.image} alt='character portrait' />
+        <CardTitle>Name: {char.name}</CardTitle>
+          <CardSubtitle>Status: {char.status}</CardSubtitle>
+        <CardText>Gender: {char.gender}</CardText>
+        <CardText>Species: {char.species}</CardText>
+      </CardBody>
     </Card>
   )
 }
