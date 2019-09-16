@@ -1,21 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-
-const Card = styled.div`
-
-    font-size: 62.5%;
-    display: flex;
-    flex-direction: column;
-    width: 17rem;
-    justify-content: space-around;
-    align-items: center;
-    
-    border: .2rem solid white
-    margin: 2rem;
-    border-radius: 1rem;
-    padding: .5rem;
-    background-color: black;
-`;
+import {Card} from '../Styles/Styles'
 
 export const EpisodeCard = (props) => {
     const ep = props.item
