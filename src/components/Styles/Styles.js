@@ -25,7 +25,7 @@ export const Card = styled.div`
     
     border: .2rem solid white
     margin: 1rem;
-    border: .2rem solid #888888
+    border: .3rem solid gray;
     border-radius: 1rem;
     padding: 1.5rem;
     background-color: white;
@@ -62,5 +62,6 @@ export const NavItem = styled(NavLink)`
     color: white;
     :hover {
         transform: scale(1.1);
+        box-shadow: .9rem .9rem .9rem #888888;
     }
 `
