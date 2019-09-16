@@ -1,9 +1,8 @@
 import React from "react";
-
-import {Card, CardImg, CardText, CardBody,
+import {Card} from '../Styles/Styles' 
+import {CardImg, CardText, CardBody,
   CardTitle, CardSubtitle} from 'reactstrap';
 
-// import {Card} from '../Styles/Styles'
 
 export const CharacterCard = (props) => {
   const char = props.item
