@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import axios from 'axios'
 import {EpisodeCard} from './EpisodeCard'
+import axios from 'axios'
 
 export const EpisodeList = (props) => {
   const [episodes, setEpisodes] = useState([])
@@ -16,7 +16,6 @@ export const EpisodeList = (props) => {
     .catch(error => {
       console.log(error)
     })
-    
   }, [])
 
   return(
