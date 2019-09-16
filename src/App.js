@@ -1,6 +1,6 @@
 import React from "react";
-import {Button} from 'reactstrap'
-import TabNav from "./components/TabNav.js";
+import {Button, Navbar} from 'reactstrap'
+import {TabNav} from "./components/TabNav.js";
 import Header from "./components/Header.js";
 import {WelcomePage} from './components/WelcomePage'
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
@@ -13,23 +13,35 @@ export default function App() {
   return (
     <main>
       <Header />
+      <Navbar sticky='top'>
+
+        <Button>
+          <Link to='/'>Welcome</Link>
+        </Button>
+        <Button>
+          <Link to='character-list'>Characters</Link>
+        </Button>
+
+        <Button>
+          <Link to='episode-list'>Episodes</Link>
+        </Button>
+
+        {/* <Button>
+        <Link to='locations-list'>Locations</Link>
+      </Button> */}
+
+      </Navbar>
+
+
       <Route exact path='/' component={WelcomePage} />
 
       <Route 
         path='/character-list' 
         render={(props) => <CharacterList {...props} />} />
 
-      <Button>
-        <Link to='character-list'>Characters</Link>
-      </Button>
-
       <Route 
         path='/episode-list' 
         render={(props) => <EpisodeList {...props} />} />
-
-      <Button>
-        <Link to='episode-list'>Episodes</Link>
-      </Button>
 
       {/* <Route
         path='/locations-list'
@@ -39,7 +51,7 @@ export default function App() {
         <Link to='locations-list'>Locations</Link>
       </Button> */}
 
-      {/* <TabNav /> */}
+      
     </main>
   );
 }
