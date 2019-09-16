@@ -35,7 +35,7 @@ const List = styled.p `
     text-align: center;
     margin: 0 auto;
     border: 0;
-    padding: 0;
+    padding: 1rem;
     color: white;
     font-size: 1.2rem;
     line-height: 1.5rem;
@@ -43,7 +43,7 @@ const List = styled.p `
 `
 
 export const EpisodeCard = (props) => {
-    const ep = props.episodes
+    const ep = props.item
     console.log(ep)
     return (
       <Container>
@@ -54,7 +54,6 @@ export const EpisodeCard = (props) => {
             </ListHeading>
       </Container>
     )
-    
 }
 
 //Episode card is what needs to be filled in.
