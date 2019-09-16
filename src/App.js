@@ -13,27 +13,32 @@ export default function App() {
   return (
     <main>
       <Header />
-      <Navbar sticky='top'>
+        <Navbar sticky='top'>
+        
+        <TabNav />
 
-        <Button>
-          <Link to='/'>Welcome</Link>
-        </Button>
-        <Button>
-          <Link to='character-list'>Characters</Link>
-        </Button>
+          <Button>
+            <Link to='/'>Welcome</Link>
+          </Button>
+          
+          <Button>
+            <Link to='character-list'>Characters</Link>
+          </Button>
 
-        <Button>
-          <Link to='episode-list'>Episodes</Link>
-        </Button>
+          <Button>
+            <Link to='episode-list'>Episodes</Link>
+          </Button>
 
-        {/* <Button>
-        <Link to='locations-list'>Locations</Link>
-      </Button> */}
+          <Button>
+          <Link to='locations-list'>Locations</Link>
+        </Button>
 
       </Navbar>
 
 
-      <Route exact path='/' component={WelcomePage} />
+      <Route exact 
+        path='/' 
+        component={WelcomePage} />
 
       <Route 
         path='/character-list' 
@@ -43,13 +48,9 @@ export default function App() {
         path='/episode-list' 
         render={(props) => <EpisodeList {...props} />} />
 
-      {/* <Route
+      <Route
         path='/locations-list'
-        render={(props) => <LocationsList {...props} />} /> */}
-
-      {/* <Button>
-        <Link to='locations-list'>Locations</Link>
-      </Button> */}
+        render={(props) => <LocationsList {...props} />} />
 
       
     </main>
