@@ -10,8 +10,7 @@ export default function App() {
   return (
     <main>
       <Header />
-      <Route path='/episodes' render={}
-      <EpisodeList />
+      <Route path='/episodes' render={(props) => <EpisodeList />} />
 
       {/* <TabNav /> */}
     </main>
