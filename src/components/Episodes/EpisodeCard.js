@@ -22,11 +22,11 @@ export const EpisodeCard = (props) => {
     console.log(ep)
     return (
       <Container>
-            <ListHeading>
-                <List>Name: {ep.name}</List>
-                <List>Episode: {ep.episode}</List>
-                <List>Episode: {ep.air_date}</List>
-            </ListHeading>
+            <div>
+                <div>Name: {ep.name}</div>
+                <div>Episode: {ep.episode}</div>
+                <div>Episode: {ep.air_date}</div>
+            </div>
       </Container>
     )
 }
