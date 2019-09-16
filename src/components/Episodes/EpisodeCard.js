@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 
-const Container = styled.div`
+const Card = styled.div`
 
     font-size: 62.5%;
     display: flex;
@@ -21,12 +21,12 @@ export const EpisodeCard = (props) => {
     const ep = props.item
     console.log(ep)
     return (
-      <Container>
+      <Card>
             <div>
                 <div>Name: {ep.name}</div>
                 <div>Episode: {ep.episode}</div>
                 <div>Episode: {ep.air_date}</div>
             </div>
-      </Container>
+      </Card>
     )
 }

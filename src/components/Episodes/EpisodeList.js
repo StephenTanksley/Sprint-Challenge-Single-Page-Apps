@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {EpisodeCard} from './EpisodeCard'
 import axios from 'axios'
+import {Container} from '../Styles/Styles'
 
 export const EpisodeList = (props) => {
   const [episodes, setEpisodes] = useState([])
@@ -11,7 +12,7 @@ export const EpisodeList = (props) => {
     axios.get('https://rickandmortyapi.com/api/episode/')
     .then(response => {
       console.log(response)
-      setEpisodes(response)
+      setEpisodes(response.data.results)
     })
     .catch(error => {
       console.log(error)
@@ -19,7 +20,8 @@ export const EpisodeList = (props) => {
   }, [])
 
   return(
-    <div> {/*This is just the place where I'm getting to pass in value for my props.*/}
+    <Container> {/*This is just the place where I'm getting to pass in value for my props.*/}
+    {/* <h1>Hi</h1> */}
       {episodes.map((item, index) => {//Doesn't run the map function until we get data back from the API.
         return (
         <EpisodeCard item = {item}
@@ -27,6 +29,6 @@ export const EpisodeList = (props) => {
             />
           )
       })}
-    </div>
+    </Container>
 
   )}
