@@ -9,9 +9,9 @@ export const LocationCard = (props) => {
    
         <Card>
           <CardBody>
-              <CardTitle>Name: {loc.name}</CardTitle>
-              <CardText>Type: {loc.type}</CardText>
-              <CardText>Dimension: {loc.dimension}</CardText>
+              <CardTitle><h3>Name: {loc.name}</h3></CardTitle>
+              <h4>Type: {loc.type}</h4>
+              <h4>Dimension: {loc.dimension}</h4>
           </CardBody>
         </Card>
 

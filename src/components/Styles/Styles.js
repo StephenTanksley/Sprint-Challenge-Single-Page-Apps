@@ -20,6 +20,7 @@ export const Card = styled.div`
     display: flex;
     flex-direction: column;
     width: auto;
+    text-align: center;
     justify-content: space-between;
     align-items: center;
     
@@ -31,7 +32,7 @@ export const Card = styled.div`
     background-color: white;
 
     :hover{
-        box-shadow: .9rem .9rem .9rem #888888;
+        box-shadow: .9rem .9rem .9rem #52a934;
     }
 
 `;

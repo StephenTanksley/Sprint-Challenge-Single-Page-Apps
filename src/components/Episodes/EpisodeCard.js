@@ -8,9 +8,9 @@ export const EpisodeCard = (props) => {
     return (
       <Card>
         <CardBody>
-            <CardTitle>Name: {ep.name}</CardTitle>
-            <CardText>Episode: {ep.episode}</CardText>
-            <CardText>Episode: {ep.air_date}</CardText>
+            <CardTitle><h3>Name: {ep.name}</h3></CardTitle><br />
+            <CardText><h4>Episode: {ep.episode}</h4></CardText>
+            <CardText><h4>Air Date: {ep.air_date}</h4></CardText>
         </CardBody>
       </Card>
     )

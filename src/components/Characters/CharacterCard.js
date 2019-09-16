@@ -10,10 +10,10 @@ export const CharacterCard = (props) => {
     <Card>
       <CardBody>
         <CardImg src={char.image} alt='character portrait' />
-        <CardTitle>Name: {char.name}</CardTitle>
-          <CardSubtitle>Status: {char.status}</CardSubtitle>
-        <CardText>Gender: {char.gender}</CardText>
-        <CardText>Species: {char.species}</CardText>
+        <CardTitle><h3>Name: {char.name}</h3></CardTitle><br />
+          <CardSubtitle><h4>Status: {char.status}</h4></CardSubtitle>
+        <h5>Gender: {char.gender}</h5>
+        <h5>Species: {char.species}</h5>
       </CardBody>
     </Card>
   )
