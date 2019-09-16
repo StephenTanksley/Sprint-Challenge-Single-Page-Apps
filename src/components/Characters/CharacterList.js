@@ -1,18 +1,31 @@
 import React, { useEffect, useState } from "react";
-import CharacterCard from './CharacterCard'
+import axios from 'axios'
+import {Container} from '../Styles/Styles'
+import {CharacterCard} from './CharacterCard'
 
-export default function CharacterList() {
+export const  CharacterList = () => {
   // TODO: Add useState to track data from useEffect
+  const [characters, setCharacters] = useState([])
 
   useEffect(() => {
-    // TODO: Add API Request here - must run in `useEffect`
-    //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-  }, []);
+    axios.get('https://rickandmortyapi.com/api/character/')
+    .then(response => {
+      console.log(response)
+      setCharacters(response.data.results)
+    })
+    .catch(error => {
+      console.log(error)
+    })
+  }, [])
 
   return (
-    <section className="character-list grid-view">
-      <h2>TODO: `array.map()` over your state here!</h2>
-      <CharacterCard />
-    </section>
+    <Container> {/*This is just the place where I'm getting to pass in value for my props.*/}
+      {characters.map((item, index) => {//Doesn't run the map function until we get data back from the API.
+        return (
+        <CharacterCard 
+          item = {item}
+          key = {index} />
+          )})}
+    </Container>
   );
 }

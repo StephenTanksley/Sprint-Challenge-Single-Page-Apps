@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import {EpisodeCard} from './EpisodeCard'
 import axios from 'axios'
 import {Container} from '../Styles/Styles'
+import {EpisodeCard} from './EpisodeCard'
 
 export const EpisodeList = (props) => {
   const [episodes, setEpisodes] = useState([])
@@ -21,14 +21,12 @@ export const EpisodeList = (props) => {
 
   return(
     <Container> {/*This is just the place where I'm getting to pass in value for my props.*/}
-    {/* <h1>Hi</h1> */}
       {episodes.map((item, index) => {//Doesn't run the map function until we get data back from the API.
         return (
-        <EpisodeCard item = {item}
-              key = {index}
-            />
-          )
-      })}
+        <EpisodeCard 
+          item = {item}
+          key = {index} />
+          )})}
     </Container>
 
   )}

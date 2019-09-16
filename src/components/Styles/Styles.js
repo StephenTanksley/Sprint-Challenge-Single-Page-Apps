@@ -8,7 +8,6 @@ export const Container = styled.div`
     margin: 0 auto;
     padding: 1rem;
     margin: 1rem;
-
 `
 
 export const Card = styled.div`
@@ -19,13 +18,13 @@ export const Card = styled.div`
     color: white;
     display: flex;
     flex-direction: column;
-    width: 27%;
-    justify-content: space-between;
+    width: auto;
+    justify-content: center;
     align-items: center;
     
     border: .2rem solid white
-    margin: 2rem;
+    margin: 1rem;
     border-radius: 1rem;
-    padding: .5rem;
+    padding: 1.5rem;
     background-color: black;
 `;
