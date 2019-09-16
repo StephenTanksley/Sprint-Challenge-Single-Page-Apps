@@ -1,6 +1,6 @@
 import React from "react";
+import TabNav from "./components/TabNav.js";
 import {Route} from 'react-router-dom'
-import {TabNav} from "./components/TabNav.js";
 import {WelcomePage} from './components/WelcomePage'
 import {CharacterList} from './components/Characters/CharacterList'
 import {EpisodeList} from './components/Episodes/EpisodeList'
@@ -16,7 +16,6 @@ export default function App() {
       
 <br />
       
-
       <Route exact 
           path='/' 
           component={WelcomePage} />
@@ -35,5 +34,3 @@ export default function App() {
     </main>
   );
 }
-
-//Need paths for Home (WelcomePage), Characters (CharacterList), Episodes (EpisodeList), and Locations(LocationList)

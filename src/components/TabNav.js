@@ -3,9 +3,8 @@ import {NavContainer, NavItem} from './Styles/Styles'
 import 'react-awesome-button/dist/themes/theme-blue.css'
 
 
-export const TabNav = () => {
+const TabNav = () => {
 
-    
 return(
     <NavContainer>
         <NavItem exact to={`/`}>Home</NavItem>
@@ -17,3 +16,4 @@ return(
     )
 };
 
+export default TabNav

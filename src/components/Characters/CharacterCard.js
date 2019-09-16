@@ -1,10 +1,10 @@
 import React from "react";
 import {Card} from '../Styles/Styles' 
-import {CardImg, CardText, CardBody,
+import {CardImg, CardBody,
   CardTitle, CardSubtitle} from 'reactstrap';
 
 
-export const CharacterCard = (props) => {
+const CharacterCard = (props) => {
   const char = props.item
   return (
     <Card>
@@ -18,3 +18,5 @@ export const CharacterCard = (props) => {
     </Card>
   )
 }
+
+export default CharacterCard;

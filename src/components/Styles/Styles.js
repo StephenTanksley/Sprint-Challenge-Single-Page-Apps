@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import {NavLink} from 'react-router-dom'
 
-
 export const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -9,7 +8,7 @@ export const Container = styled.div`
     align-items: center;
     padding: 1rem;
     margin: 1rem;
-`
+`;
 
 export const Card = styled.div`
 
@@ -23,7 +22,6 @@ export const Card = styled.div`
     text-align: center;
     justify-content: space-between;
     align-items: center;
-    
     border: .2rem solid white
     margin: 1rem;
     border: .3rem solid gray;
@@ -34,9 +32,7 @@ export const Card = styled.div`
     :hover{
         box-shadow: .9rem .9rem .9rem #52a934;
     }
-
 `;
-
 
 export const NavContainer = styled.div`
 
@@ -44,8 +40,7 @@ export const NavContainer = styled.div`
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-
-`
+`;
 
 export const NavItem = styled(NavLink)`
     display: flex;
@@ -61,8 +56,9 @@ export const NavItem = styled(NavLink)`
     border-radius: .5rem;
     background-color: #52a934
     color: white;
+    
     :hover {
         transform: scale(1.1);
         box-shadow: .9rem .9rem .9rem #888888;
     }
-`
+`;
