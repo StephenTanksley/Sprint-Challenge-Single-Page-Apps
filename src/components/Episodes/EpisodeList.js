@@ -20,6 +20,8 @@ export const EpisodeList = (props) => {
   }, [])
 
   return(
+    <div>
+    <Container><h1>Episodes!</h1></Container>
     <Container> {/*This is just the place where I'm getting to pass in value for my props.*/}
       {episodes.map((item, index) => {//Doesn't run the map function until we get data back from the API.
         return (
@@ -28,5 +30,5 @@ export const EpisodeList = (props) => {
           key = {index} />
           )})}
     </Container>
-
+    </div>
   )}

@@ -6,12 +6,14 @@ export const LocationCard = (props) => {
     const loc = props.item
     console.log(loc)
     return (
-      <Card>
-        <CardBody>
-            <CardTitle>Name: {loc.name}</CardTitle>
-            <CardText>Type: {loc.type}</CardText>
-            <CardText>Dimension: {loc.dimension}</CardText>
-        </CardBody>
-      </Card>
+   
+        <Card>
+          <CardBody>
+              <CardTitle>Name: {loc.name}</CardTitle>
+              <CardText>Type: {loc.type}</CardText>
+              <CardText>Dimension: {loc.dimension}</CardText>
+          </CardBody>
+        </Card>
+
     )
 }

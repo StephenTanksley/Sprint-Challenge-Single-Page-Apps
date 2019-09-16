@@ -1,20 +1,19 @@
 import React from "react";
-import { Navbar } from 'reactstrap';
+import {NavContainer, NavItem} from './Styles/Styles'
+import 'react-awesome-button/dist/themes/theme-blue.css'
 
-
-// TODO: Add missing menu/tabs/nav below
-
-// Review Semantic UI Component options for nav-like UI:
-// https://react.semantic-ui.com/collections/menu/
-// https://react.semantic-ui.com/modules/tab/
-// https://react.semantic-ui.com/elements/button/
-// https://react.semantic-ui.com/collections/breadcrumb/
 
 export const TabNav = () => {
 
+    
 return(
-    <Navbar sticky='top'>
-        <h1>blah</h1>
-    </Navbar>
-)
+    <NavContainer>
+        <NavItem exact to={`/`}>Home</NavItem>
+        <NavItem to='character-list'>Characters</NavItem>
+        <NavItem to='episode-list'>Episodes</NavItem>
+        <NavItem to='locations-list'>Locations</NavItem>
+    </NavContainer>
+
+    )
 };
+
