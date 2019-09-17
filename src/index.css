@@ -2,16 +2,21 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-image: url("./components/Images/cropped-RM_page-header_background1-3.png");
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-attachment: fixed;
+  background-position: center; 
 }
 
 main {
-  width: 85vw;
+  width: 90vw;
   min-height: 80vh;
   max-width: 1024px;
   margin: 35px auto;
-  background: #fff;
+  background: none;
   padding: 15px;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  /* box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); */
 }
 
 .grid-view {
@@ -37,4 +42,3 @@ main {
 header h1 {
   text-align: center;
 }
-

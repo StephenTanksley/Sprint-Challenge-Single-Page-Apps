@@ -10,6 +10,8 @@ export const Container = styled.div`
     margin: 1rem;
 `;
 
+
+
 export const Card = styled.div`
 
     font-size: 62.5%;
@@ -62,3 +64,29 @@ export const NavItem = styled(NavLink)`
         box-shadow: .9rem .9rem .9rem #888888;
     }
 `;
+
+export const Button = styled.button`
+
+    width: auto;
+    height: 5rem;
+    display: flex;
+    color: black;
+    cursor: pointer;
+    // url: './Images/transparentportalgun.png';
+    
+`
+
+
+export const Counter = styled.div`
+    display: flex;
+    font-size: 1.2rem;
+    margin: 1rem;
+    padding: 1rem;
+`
+
+export const Schwifty = styled.h1`
+    color: white;
+    font-size: 1.6rem;
+`
+
+// export const Portal = require('./logo.jpeg);

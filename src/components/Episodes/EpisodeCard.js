@@ -2,7 +2,7 @@ import React from 'react';
 import {Card} from '../Styles/Styles'
 import {CardText, CardBody, CardTitle} from 'reactstrap';
 
-export const EpisodeCard = (props) => {
+export const EpisodeCard = (props) => { //We're formatting props to become a variable we can manipulate.
     const ep = props.item
     console.log(ep)
     return (
@@ -15,3 +15,10 @@ export const EpisodeCard = (props) => {
       </Card>
     )
 }
+
+
+
+
+//  App ---(props)--------> 
+//  EpisodeList (logic lives here) --------> 
+//  EpisodeCard (is just a container that formats what Episode List gets from props)

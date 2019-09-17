@@ -14,7 +14,7 @@ export default function App() {
       <br />
       <TabNav />
       
-<br />
+{/* <br /> */}
       
       <Route exact 
           path='/' 

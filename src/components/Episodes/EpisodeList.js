@@ -3,12 +3,10 @@ import axios from 'axios'
 import {Container} from '../Styles/Styles'
 import {EpisodeCard} from './EpisodeCard'
 
-export const EpisodeList = (props) => {
+export const EpisodeList = () => {
   const [episodes, setEpisodes] = useState([])
 
   useEffect(() => {
-    console.log(props);
-
     axios.get('https://rickandmortyapi.com/api/episode/')
     .then(response => {
       console.log(response)
@@ -32,6 +30,8 @@ export const EpisodeList = (props) => {
     </Container>
     </div>
   )}
+
+//If you add your effect calls in App, it will call for everything at the very beginning instead of waiting for each component to be called specifically. Could speed up loading time.
 
 //Don showed me how this would be formatted using the class syntax as opposed to using Hooks.
   
