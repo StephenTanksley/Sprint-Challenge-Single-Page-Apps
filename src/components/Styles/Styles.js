@@ -11,7 +11,6 @@ export const Container = styled.div`
 `;
 
 
-
 export const Card = styled.div`
 
     font-size: 62.5%;
@@ -40,28 +39,28 @@ export const NavContainer = styled.div`
 
     display: flex;
     margin: 0 auto;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 `;
 
 export const NavItem = styled(NavLink)`
     display: flex;
-    font-size: 1.4rem;
+    font-size: 2rem;
+    // border: .1rem solid white;
+    text-shadow: 2px 2px 4px #000000;    
     margin: 0 auto;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    padding: 2rem;
-    width: 10rem;
-    height: 4rem;
-    border: .3rem solid gray;
-    border-radius: .5rem;
-    background-color: #52a934
+    padding: 4.5rem;
+    width: 4.5rem
+    height: 4.6rem;
+
     color: white;
     
     :hover {
         transform: scale(1.1);
-        box-shadow: .9rem .9rem .9rem #888888;
+        color: lightgray;
     }
 `;
 
@@ -72,7 +71,6 @@ export const Button = styled.button`
     display: flex;
     color: black;
     cursor: pointer;
-    // url: './Images/transparentportalgun.png';
     
 `
 
@@ -82,6 +80,7 @@ export const Counter = styled.div`
     font-size: 1.2rem;
     margin: 1rem;
     padding: 1rem;
+    color: white;
 `
 
 export const Schwifty = styled.h1`
@@ -89,4 +88,3 @@ export const Schwifty = styled.h1`
     font-size: 1.6rem;
 `
 
-// export const Portal = require('./logo.jpeg);

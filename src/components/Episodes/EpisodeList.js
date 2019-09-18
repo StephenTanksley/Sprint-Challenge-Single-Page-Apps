@@ -1,25 +1,61 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios'
-import {Container} from '../Styles/Styles'
+import {Container, Counter} from '../Styles/Styles'
 import {EpisodeCard} from './EpisodeCard'
+import NavGunLeft from '../Images/transparentportalgun-rotatedLeft.png'
+import NavGunRight from '../Images/transparentportalgun-rotatedRight.png'
 
 export const EpisodeList = () => {
   const [episodes, setEpisodes] = useState([])
+  const [totalPages, setTotalPages] = useState(false)
+  const [currentPage, setCurrentPage] = useState(1) //I'm setting my page data here.
+
+
+  
 
   useEffect(() => {
-    axios.get('https://rickandmortyapi.com/api/episode/')
+    axios.get(`https://rickandmortyapi.com/api/episode/?page=${currentPage}`)
     .then(response => {
       console.log(response)
       setEpisodes(response.data.results)
+      setTotalPages(response.data.info.pages)
     })
     .catch(error => {
       console.log(error)
     })
-  }, [])
+  }, [currentPage])
+
+//These functions need to be consolidated into a different component so I don't need to restate them every time I want to use them.
+  const PageBack = () => (currentPage > 1 && currentPage <= totalPages + 1) ? 
+  setCurrentPage(currentPage - 1) : alert('Not a valid universe!')
+
+
+  const PageForward = () => (currentPage >= 1 && currentPage < totalPages) ? 
+    setCurrentPage(currentPage + 1) : alert('Not a valid universe!')
+
+
 
   return(
     <div>
     <Container><h1>Episodes!</h1></Container>
+      <Container>
+          <div className="mouseover">
+            <img src={NavGunLeft} onClick={PageBack}/>
+          </div>
+        <Counter> Page {currentPage} of {totalPages} </Counter>
+
+        <div className="mouseover">
+          <img className="mouseover" src={NavGunRight} onClick={PageForward}/>
+        </div>
+
+
+
+      </Container>
+
+
+
+
+
     <Container> {/*This is just the place where I'm getting to pass in value for my props.*/}
       {episodes.map((item, index) => {//Doesn't run the map function until we get data back from the API.
         return (
@@ -30,6 +66,23 @@ export const EpisodeList = () => {
     </Container>
     </div>
   )}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //If you add your effect calls in App, it will call for everything at the very beginning instead of waiting for each component to be called specifically. Could speed up loading time.
 

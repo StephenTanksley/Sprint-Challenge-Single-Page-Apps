@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios'
 import {Container, Counter, Button} from '../Styles/Styles'
 import CharacterCard from './CharacterCard'
+import NavGunLeft from '../Images/transparentportalgun-rotatedLeft.png'
+import NavGunRight from '../Images/transparentportalgun-rotatedRight.png'
 
 
 
@@ -11,19 +13,6 @@ export const  CharacterList = () => {
   const [totalPages, setTotalPages] = useState(false)
   const [currentPage, setCurrentPage] = useState(1) //I'm setting my page data here.
 
-//   let pageNext = () => {
-//     if(currentPage >= 1 && currentPage < totalPages.length){
-//       setCurrentPage(currentPage++)
-//       console.log(currentPage)
-//    }
-//   }
-
-//   let pagePrevious = () => {
-//     if(currentPage > 1 && currentPage <= totalPages.length){
-//     setCurrentPage(currentPage--)
-//     console.log(currentPage)
-//  }
-// }
 
 
 //  setPreferredPage ---- > input field ---- (onSubmit) ---- setCurrentPage(formValue) ---- dependency array(currentPage)
@@ -44,24 +33,25 @@ export const  CharacterList = () => {
   console.log(characters);
   console.log(totalPages)
 
+  const PageBack = () => (currentPage > 1 && currentPage <= totalPages + 1) ? 
+  setCurrentPage(currentPage - 1) : alert('Not a valid universe!')
+
+  const PageForward = () => (currentPage >= 1 && currentPage < totalPages) ? 
+    setCurrentPage(currentPage + 1) : alert('Not a valid universe!')
+
+
   return (
   <div>
     <Container><h1>Characters!</h1></Container>
     <Container>
-      <Button onClick={() => (currentPage > 1 && currentPage <= totalPages + 1) ? 
-        setCurrentPage(currentPage - 1) : alert('Not a valid universe!')}>
-        Previous
-      </Button>
-
+        <div className="mouseover">
+          <img src={NavGunLeft} onClick={PageBack}/>
+        </div>
       <Counter> Page {currentPage} of {totalPages} </Counter>
-      
-      
 
-      <Button onClick={() => 
-        (currentPage >= 1 && currentPage < totalPages) ? 
-        setCurrentPage(currentPage + 1) : alert('Not a valid universe!')}>
-          Next
-      </Button>
+      <div className="mouseover">
+        <img className="mouseover" src={NavGunRight} onClick={PageForward}/>
+      </div>
 
     </Container>
 

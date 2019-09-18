@@ -42,3 +42,52 @@ main {
 header h1 {
   text-align: center;
 }
+
+.mouseover:hover {
+  transform: scale(1.0725)
+}
+
+.mouseover:active {
+  transform: scale(0.9725)
+}
+
+.portal {
+  display: flex;
+  background-image: url("./components/Images/5b537363393dc26c68b566fe482eb32d.png");
+  background-repeat: no-repeat;
+}
+
+.portal:hover {
+  transform: scale(1.0725)
+}
+
+.portal:active {
+  transform: scale(0.9725)
+}
+
+.right:hover {
+  position: inherit;
+  -webkit-animation:spinR 5s linear infinite;
+  -moz-animation:spinR 5s linear infinite;
+  animation:spinR 5s linear infinite;
+}
+
+@-moz-keyframes spinR { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spinR { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spinR { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+/* 
+.left:hover {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: auto;
+  height: auto;
+  margin:-60px 0 0 -60px;
+  -webkit-animation:spinL 4s linear infinite;
+  -moz-animation:spinL 4s linear infinite;
+  animation:spinL 4s linear infinite;
+}
+
+@-moz-keyframes spinL { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spinL { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spinL { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } } */

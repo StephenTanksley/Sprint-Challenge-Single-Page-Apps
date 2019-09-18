@@ -7,10 +7,19 @@ const TabNav = () => {
 
 return(
     <NavContainer>
-        <NavItem exact to={`/`}>Home</NavItem>
-        <NavItem to='character-list'>Characters</NavItem>
-        <NavItem to='episode-list'>Episodes</NavItem>
-        <NavItem to='locations-list'>Locations</NavItem>
+        <div className="portal left">
+            <NavItem exact to={`/`}>Home</NavItem>
+        </div>
+        <div className="portal">
+            <NavItem to='character-list'>Characters</NavItem>
+        </div>
+        <div className="portal">
+            <NavItem to='episode-list'>Episodes</NavItem>
+        </div>
+        <div className="portal right">
+            <NavItem to='locations-list'>Locations</NavItem>
+        </div>
+
     </NavContainer>
 
     )
